@@ -1,0 +1,26 @@
+package com.example.exceptiontt.key2;
+
+import com.example.exceptiontt.key2.entity.License;
+import com.example.exceptiontt.key2.utils.RSAUtilsSimple;
+
+public class Testtt {
+    public static void main(String[] args) throws Exception {
+        License license = new License();
+        license.setConnections("123123123");
+        license.setBuild_date("11.23");
+        license.setContact_email("19222233@133.com");
+        license.setContact_tel("jack");
+        StringBuilder stringBuilder = new StringBuilder();
+//        stringBuilder.append(license.getConnections()).append(license.getBuild_date()).append(license.getContact_email())
+//                        .append(license.)
+//        System.out.println(string.length());
+       String pri = "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";
+        String priDate = RSAUtilsSimple.encryptByPrivateKey(license.toString(),pri);
+
+        System.out.println("加密后："+ priDate);
+        String pub ="MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1nFZwGQKah3R4f6m2E6vz7rW41EFnbs7Yz1V/RsAwUwdyv5AZr7h28pY891fLsetgwlvtG42lm4WQ7H2Z7CNUML/xzAdvOc8Ye9uTSSFN91y5jTSFiy0+3v3GGJthmRG9vcncgH1d5hZYslPO49kMNFdmd7NC5hZS17oYtJrT2a62B83WrzilaeFzSFD6soPz1MkIrbA3L6MmjC27xzrf5NKZwJhXQVSfQE03OA99kAjXtvmnc4wFS6FrXmy3gxI/GXq54thcyCdhwtdAk7FDLNoWsMfEtops4048/FKZO8/EADE1Xu+yojB8PUp92Uby80iKOtUgehV4qnIAfThJYN1vJ67amVBgiSbmazBhEqolX5MWbkRPSJPySTUUPvyUCWuxvUHtMCPNTqJ9wyRHoiIUS/7+mBp0oXd90pfkPLsS9kcY8e9Dzzsi7vRgIfCfcM/0faDIDBfzOLTn6xWYiWYWMP+hzu5xC/XuNBB8lsko+7PyorIlNGgxH8wXi46PUvsFzoakunc/7tbJc49irQ/kpejtoyAAaO4TTs3Oknlqo0QB9xjO1E9n2E//evpIECR7rpcYadX5rsCZiMhjShZrnbrca80yyIZ66rG+vKMU7jyxtelLEyr6z6lIkuqpyKiAE6xKS3pKpf1pBgGLMbDrxQAg8ScA64BTK6gJQMCAwEAAQ==";
+       String pubDate = RSAUtilsSimple.decryptByPublicKey(priDate,pub);
+        System.out.println("解密后："+pubDate );
+        System.out.println(license);
+    }
+}
