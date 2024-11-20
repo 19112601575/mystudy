@@ -28,4 +28,18 @@ public class User {
 
     @TableField("created_at")
     private LocalDateTime createdAt;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", age=" + age +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
+    }
+
+
 }

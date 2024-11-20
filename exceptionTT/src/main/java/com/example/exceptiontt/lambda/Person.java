@@ -10,6 +10,7 @@ public class Person {
     private String sex;
     private String address;
 
+    public Person(){}
     //@Data只有默认无参构造器
     public Person(String name, Integer salary, Integer age, String sex, String address) {
         this.name = name;
