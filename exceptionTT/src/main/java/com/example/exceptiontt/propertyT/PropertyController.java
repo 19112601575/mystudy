@@ -1,9 +1,10 @@
 package com.example.exceptiontt.propertyT;
 
 import com.example.exceptiontt.exception.Resp;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+
 
 
 @RestController

@@ -1,9 +1,9 @@
 package com.example.exceptiontt.jpa.mapperJpa;
 
 import com.example.exceptiontt.jpa.entityJpa.UserJpa;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -43,9 +43,9 @@ public interface UserMapperJpa extends JpaRepository<UserJpa,Integer>{
     /*
     3、查询参数设置
      */
-
-    @Query("SELECT u FROM UserJpa u WHERE u.userName = :userName AND u.age = :age")
-    UserJpa findByUserNameAndAge(@Param("username")String userName,@Param("age")int age);
+//
+//    @Query("SELECT u FROM UserJpa u WHERE u.userName = :userName AND u.age = :age")
+//    UserJpa findByUserNameAndAge(@Param("username") String userName, @Param("age")int age);
 
     /*
     4、使用@Query注解的value导入sql语句查询
