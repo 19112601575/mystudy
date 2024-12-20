@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>exceptionTT</artifactId>
+    <artifactId>myCode</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>exceptionTT</name>
     <description>exceptionTT</description>
@@ -26,10 +26,44 @@
         <tag/>
         <url/>
     </scm>
+    <profiles>
+        <profile>
+<!--            该配置文件唯一标识-->
+            <id>dev</id>
+<!--            何时激活配置文件-->
+            <activation>
+<!--             没有其他配置，默认激活   -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+<!--            构建配置-->
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <includes>
+                            <include>application-dev.properties</include>
+<!--                            <include>logback-dev.xml</include>-->
+                        </includes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
     <properties>
         <java.version>21</java.version>
     </properties>
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.14.2</version>
+            <scope>test</scope>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -118,11 +152,14 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.3.5</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>

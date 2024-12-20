@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MockMvcController {
 
-    @PostMapping("/mock/test")
-    public Resp mockTest(@RequestBody Person person){
-        Person person1 = new Person();
-        BeanUtils.copyProperties(person,person1);
-        return Resp.success(person1);
-    }
+//    @PostMapping("/mock/test")
+//    public Resp mockTest(@RequestBody Person person){
+//        Person person1 = new Person();
+//        BeanUtils.copyProperties(person,person1);
+//        return Resp.success(person1);
+//    }
 }
