@@ -23,8 +23,8 @@ public class ConcreteBuild implements Builder {
     @Override
     public Cars getCars() {
         Cars cars = new Cars();
-        cars.setTires(tires);
-        cars.setGlass(glass);
+//        cars.setTires(tires);
+//        cars.setGlass(glass);
         return cars;
     }
 }

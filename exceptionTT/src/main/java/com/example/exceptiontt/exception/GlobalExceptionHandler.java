@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
 import java.util.Map;
+
 @Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -36,6 +37,7 @@ public class GlobalExceptionHandler {
             errors.put(fieldName, errorMessage);
         });
         log.error("Validation failed: {}", errors);
-        return  Resp.<Map<String, String>>error(22222, "Validation failed").addData(errors);
+
+        return Resp.<Map<String, String>>error(22222, "Validation failed").addData(errors);
     }
 }

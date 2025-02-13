@@ -20,7 +20,7 @@ public class DemoController {
             return Resp.success("succ");
         }
         if ("err".equals(name)) {
-            log.info("用户名错误");
+//            log.info("用户名错误");
             //抛业务相关的异常
             throw new AppException(AppExceptionCodeMsg.USERNAME_NOT_EXISTS);
 

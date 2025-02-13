@@ -26,30 +26,30 @@
         <tag/>
         <url/>
     </scm>
-    <profiles>
-        <profile>
-<!--            该配置文件唯一标识-->
-            <id>dev</id>
-<!--            何时激活配置文件-->
-            <activation>
-<!--             没有其他配置，默认激活   -->
-                <activeByDefault>true</activeByDefault>
-            </activation>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--&lt;!&ndash;            该配置文件唯一标识&ndash;&gt;-->
+<!--            <id>dev</id>-->
+<!--&lt;!&ndash;            何时激活配置文件&ndash;&gt;-->
+<!--            <activation>-->
+<!--&lt;!&ndash;             没有其他配置，默认激活   &ndash;&gt;-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
 
-<!--            构建配置-->
-            <build>
-                <resources>
-                    <resource>
-                        <directory>src/main/resources</directory>
-                        <includes>
-                            <include>application-dev.properties</include>
-<!--                            <include>logback-dev.xml</include>-->
-                        </includes>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
-    </profiles>
+<!--&lt;!&ndash;            构建配置&ndash;&gt;-->
+<!--            <build>-->
+<!--                <resources>-->
+<!--                    <resource>-->
+<!--                        <directory>src/main/resources</directory>-->
+<!--                        <includes>-->
+<!--                            <include>application-dev.properties</include>-->
+<!--&lt;!&ndash;                            <include>logback-dev.xml</include>&ndash;&gt;-->
+<!--                        </includes>-->
+<!--                    </resource>-->
+<!--                </resources>-->
+<!--            </build>-->
+<!--        </profile>-->
+<!--    </profiles>-->
     <properties>
         <java.version>21</java.version>
     </properties>
@@ -150,8 +150,14 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.30</version> <!-- 使用最新版本 -->
+            <scope>provided</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
